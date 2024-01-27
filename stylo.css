@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items:  center;
+    justify-content: center;
+    background-image: url(Trabajamos\ bien..png );
+    background-repeat: no-repeat;
+  }
+  
+  #contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contenedorUno{
+    max-width: 950px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    border: #9cec08 3px solid;
+  }
+  .heros{
+    max-width: 950px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  
+  }
+
+  .contenedorUno h1{
+    color: #9cec08;
+  }
+  
+  .contenedorUno p{
+    font-size: 12px;
+    padding: 10px;
+    color: #9cec08;
+  
+  }
+  
+  .contenedorUno div button{
+    width: 40%;
+    padding: 5px;
+    --color: #0be01d;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+  } 
+  .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+  
+  
+  .contenedorDos  {
+    border: 2px solid #080808;
+    background: #9cec08 ;
+  }
+  
+  .contenedorDos .text-input{
+    display: flex;
+  }
+  
+  .text-input .to-text{
+    border-left: 2px solid #080808;
+    
+
+  }
+  
+  .text-input textarea{
+    resize: none;
+    height: 100px;
+    width: 100%;
+    background: none;
+    border:none;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  
+  
+
+  
+  @media screen and (max-width: 600px) {
+  
+    .contenedorUno_titulo{
+      font-size: 1.50rem;
+    }
+    #btn{
+      font-size: 90%;
+    }
+    .contenedorUno div button {
+      width: 70%; 
+    }
+  
+    .text-input textarea::placeholder {
+      font-size: 13px;
+    }
+  }
+  
